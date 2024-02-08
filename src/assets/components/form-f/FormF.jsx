@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const FormF = () => {
+  // let newsStorage = [];
+
   const initialState = {
     title: "",
     abstract: "",
@@ -9,13 +11,30 @@ const FormF = () => {
     setData({ ...initialState });
   };
 
-  const [data, setData] = useState([initialState]);
+  const [data, setData] = useState(initialState);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
+  const [newsStorage, setNewsStorage] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`sending ${data.title} ${data.abstract}`);
+
+    const newPiece = {
+      title: data.title,
+      abstract: data.abstract,
+    };
+    // setting the piece of news to local storage
+    localStorage.setItem("piece", JSON.stringify(newPiece));
+    newsStorage.push(newPiece);
+    console.log(newsStorage);
+    // setting arrach of object with pieces of news to local storage
+    localStorage.setItem("newsCollection", JSON.stringify(newsStorage));
+
+    //retrieving and logging the array wiht saved in local storage news
+    let newsStorageRetrieved =
+      JSON.parse(localStorage.getItem("newsCollection")) || [];
+    console.log(newsStorageRetrieved);
     clearState();
   };
 
