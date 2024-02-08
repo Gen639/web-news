@@ -26,10 +26,10 @@ const FormF = () => {
     };
     // setting the piece of news to local storage
     localStorage.setItem("piece", JSON.stringify(newPiece));
-    newsStorage.push(newPiece);
-    console.log(newsStorage);
-    // setting arrach of object with pieces of news to local storage
-    localStorage.setItem("newsCollection", JSON.stringify(newsStorage));
+
+    const updatedNewsStorage = [...newsStorage, newPiece];
+    setNewsStorage(updatedNewsStorage);
+    localStorage.setItem("newsCollection", JSON.stringify(updatedNewsStorage));
 
     //retrieving and logging the array wiht saved in local storage news
     let newsStorageRetrieved =
