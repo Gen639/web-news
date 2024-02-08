@@ -7,6 +7,8 @@ const ListF = () => {
   let newsStorageRetrieved =
     JSON.parse(localStorage.getItem("newsCollection")) || [];
 
+  JSON.parse(localStorage.getItem("newsCollection")) || [];
+
   useEffect(() => {
     getNews();
   }, []);
@@ -37,9 +39,9 @@ const ListF = () => {
           </div>
         ))}
       </div>
-      <div className="main-container">
+      <div className="main-container ">
         {newsStorageRetrieved.map((piece, index) => (
-          <div className="div-container" key={index}>
+          <div className="div-container from-storage" key={index}>
             <h3>{piece.title}</h3>
             <p>{piece.abstract}</p>
           </div>

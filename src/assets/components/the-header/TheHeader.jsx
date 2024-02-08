@@ -13,7 +13,7 @@ const TheHeader = () => {
         "/form" or click "Go To Form" link, fill the form and submit your news.
       </p>
       <p>
-        Once news are submited, it is saved in local storage, the page is
+        Once news are submited, they are saved in local storage, the page is
         redirected to "/list", where the news added via the Form are added as
         well.
       </p>

@@ -14,7 +14,11 @@ const FormF = () => {
   const [data, setData] = useState(initialState);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
-  const [newsStorage, setNewsStorage] = useState([]);
+
+  const [newsStorage, setNewsStorage] = useState(() => {
+    const storedNews = JSON.parse(localStorage.getItem("newsCollection")) || [];
+    return storedNews;
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
