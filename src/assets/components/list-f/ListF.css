@@ -4,16 +4,7 @@
   justify-content: space-evenly;
   /* text-align: flex-start; */
 }
-.div-container {
-  margin: 10px;
-  padding: 10px;
-  background-color: rgb(237, 182, 182);
-  border-color: rgb(90, 8, 242);
-  border-radius: 25%;
-  max-width: 250px;
-  min-width: 200px;
-}
 
 .from-storage {
-  background-color: rgb(140, 220, 255);
+  background-color: rgb(167, 211, 117) !important;
 }

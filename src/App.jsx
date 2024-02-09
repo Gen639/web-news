@@ -5,6 +5,7 @@ import TheHeader from "./assets/components/the-header/TheHeader";
 import FormF from "./assets/components/form-f/FormF";
 import ListF from "./assets/components/list-f/ListF";
 import NavF from "./assets/components/nav-f/NavF";
+import Footer from "./assets/components/footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/form" element={<FormF />} />
           <Route path="/list" element={<ListF />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
