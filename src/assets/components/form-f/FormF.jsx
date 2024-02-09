@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 
 const FormF = () => {
-  // let newsStorage = [];
+  // const initialState = {
+  //   title: "",
+  //   abstract: "",
+  // };
 
-  const initialState = {
-    title: "",
-    abstract: "",
-  };
+  const initialState = [
+    {
+      abstract: "",
+      headlines: {
+        main: "",
+      },
+    },
+  ];
+
   const clearState = () => {
     setData({ ...initialState });
   };
@@ -24,10 +32,18 @@ const FormF = () => {
     event.preventDefault();
     console.log(`sending ${data.title} ${data.abstract}`);
 
+    // const newPiece = {
+    //   title: data.title,
+    //   abstract: data.abstract,
+    // };
+
     const newPiece = {
-      title: data.title,
       abstract: data.abstract,
+      headline: {
+        main: data.title,
+      },
     };
+
     // setting the piece of news to local storage
     localStorage.setItem("piece", JSON.stringify(newPiece));
 

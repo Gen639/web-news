@@ -1,4 +1,4 @@
-const news = (state, action) => {
+const AppReducer = (state, action) => {
   switch (action.type) {
     case "GET_NEWS":
       return {
@@ -9,4 +9,5 @@ const news = (state, action) => {
       return state;
   }
 };
-export default news;
+
+export default AppReducer;

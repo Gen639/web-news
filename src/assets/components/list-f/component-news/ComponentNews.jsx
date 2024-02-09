@@ -2,6 +2,7 @@ import React from "react";
 import "./ComponentNews.css";
 
 const ComponentNews = (props) => {
+  console.log("Data in ComponentNews:", props.data);
   return (
     <>
       <div className="div-container">

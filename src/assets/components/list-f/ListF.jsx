@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import "./ListF.css";
 import { GlobalContext } from "../../../context/GlobalState";
+import ComponentNews from "./component-news/ComponentNews";
 // import ComponentNews from "./component-news/ComponentNews";
 
 const ListF = () => {
@@ -14,12 +15,10 @@ const ListF = () => {
   }, []);
 
   return (
-    news &&
-    news.map((piece) => (
-      <div key={piece.id}>
-        <h2>{piece.abstract}</h2>
-      </div>
-    ))
+    <div className="main-container">
+      {news &&
+        news.map((piece, index) => <ComponentNews key={index} data={piece} />)}
+    </div>
   );
 };
 

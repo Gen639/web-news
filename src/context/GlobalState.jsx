@@ -11,16 +11,30 @@ const initialState = {
 };
 
 export const GlobalProvider = ({ children }) => {
+  //   const [state, dispatch] = useReducer(AppReducer, initialState);
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const getNews = async () => {
-    const response = await axios.get(
-      `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=xxx`
-    );
-    dispatch({
-      type: "GET_NEWS",
-      payload: response.data.response.docs,
-    });
+    try {
+      const response = await axios.get(
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=retail&api-key=xxx`
+      );
+
+      const locallyStoredNews =
+        JSON.parse(localStorage.getItem("newsCollection")) || [];
+      const combinedNews = [
+        ...response.data.response.docs,
+        ...locallyStoredNews,
+      ];
+
+      dispatch({
+        type: "GET_NEWS",
+        payload: combinedNews,
+      });
+    } catch (error) {
+      // Handle error if needed
+      console.error("Error fetching news:", error);
+    }
   };
 
   return (
