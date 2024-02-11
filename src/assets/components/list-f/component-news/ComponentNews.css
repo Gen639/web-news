@@ -2,8 +2,17 @@
   margin: 10px;
   padding: 10px;
   background-color: rgba(91, 109, 130, 0.806);
-  border-color: rgb(90, 8, 242);
-  border-radius: 25%;
-  max-width: 250px;
-  min-width: 200px;
+  width: 80%;
+  height: 300px;
+}
+h3 {
+  color: whitesmoke;
+}
+p {
+  color: rgb(85, 33, 33);
+  font-style: oblique;
+}
+.background-image {
+  background-size: cover;
+  background-position: center;
 }
