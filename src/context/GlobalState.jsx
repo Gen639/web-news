@@ -17,7 +17,7 @@ export const GlobalProvider = ({ children }) => {
   const getNews = async () => {
     try {
       const response = await axios.get(
-        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=retail&api-key=sWMost9WQwGwn1pHQo9mXGxvksyhUsDu`
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=xxx`
       );
 
       const locallyStoredNews =
