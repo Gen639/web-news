@@ -2,14 +2,14 @@
   margin: 10px;
   padding: 10px;
   background-color: rgba(91, 109, 130, 0.806);
-  width: 80%;
-  height: 300px;
+  min-width: 600px;
+  min-height: 400px;
 }
 h3 {
-  color: whitesmoke;
+  color: rgb(0, 38, 255);
 }
 p {
-  color: rgb(85, 33, 33);
+  color: rgb(255, 255, 0);
   font-style: oblique;
 }
 .background-image {

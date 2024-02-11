@@ -2,10 +2,7 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import axios from "axios";
 
-// import dotenv from "dotenv";
-// dotenv.config();
-// const APIKEY = process.env.APIKEY;
-
+// sWMost9WQwGwn1pHQo9mXGxvksyhUsDu
 const initialState = {
   news: [],
 };
@@ -17,7 +14,7 @@ export const GlobalProvider = ({ children }) => {
   const getNews = async () => {
     try {
       const response = await axios.get(
-        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=xxx`
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=retail&api-key=xxx`
       );
 
       const locallyStoredNews =

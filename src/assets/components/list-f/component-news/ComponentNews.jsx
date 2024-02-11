@@ -1,5 +1,6 @@
 import React from "react";
 import "./ComponentNews.css";
+import { Carousel } from "react-bootstrap";
 
 const ComponentNews = (props) => {
   console.log("Data in ComponentNews:", props.data);
@@ -16,12 +17,12 @@ const ComponentNews = (props) => {
   };
 
   return (
-    <div
-      className="div-container background-image"
-      style={backgroundImageStyle}
-    >
-      <h3 style={{ color: "whitesmoke" }}>{props.data.headline.main}</h3>
-      <p>{props.data.abstract}</p>
+    <div className="div-container">
+      <img className="d-block" src={imageUrl} />{" "}
+      <Carousel.Caption>
+        <h3 style={{ color: "rgb(0, 38, 255)" }}>{props.data.headline.main}</h3>
+        <p>{props.data.abstract}</p>
+      </Carousel.Caption>
     </div>
   );
 };
