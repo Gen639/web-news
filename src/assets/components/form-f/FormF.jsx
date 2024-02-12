@@ -1,19 +1,12 @@
 import React, { useState } from "react";
 
 const FormF = () => {
-  // const initialState = {
-  //   title: "",
-  //   abstract: "",
-  // };
-
-  const initialState = [
-    {
-      abstract: "",
-      headlines: {
-        main: "",
-      },
+  const initialState = {
+    abstract: "",
+    headline: {
+      main: "",
     },
-  ];
+  };
 
   const clearState = () => {
     setData({ ...initialState });
@@ -31,11 +24,6 @@ const FormF = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`sending ${data.title} ${data.abstract}`);
-
-    // const newPiece = {
-    //   title: data.title,
-    //   abstract: data.abstract,
-    // };
 
     const newPiece = {
       abstract: data.abstract,
@@ -78,14 +66,14 @@ const FormF = () => {
         <input
           type="text"
           placeholder="title"
-          value={data.title}
+          value={data.title || ""}
           name="title"
           onChange={handleInputChange}
         />
         <input
           type="text"
           placeholder="abstract"
-          value={data.abstract}
+          value={data.abstract || ""}
           name="abstract"
           onChange={handleInputChange}
         />
