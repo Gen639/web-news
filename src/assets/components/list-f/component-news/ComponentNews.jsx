@@ -10,11 +10,11 @@ const ComponentNews = (props) => {
       ? `https://www.nytimes.com/${props.data.multimedia[0].url}`
       : "";
 
-  const backgroundImageStyle = {
-    backgroundImage: `url(${imageUrl})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+  // const backgroundImageStyle = {
+  //   backgroundImage: `url(${imageUrl})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  // };
 
   return (
     <div className="div-container">

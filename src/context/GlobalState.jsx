@@ -2,13 +2,11 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 import axios from "axios";
 
-// sWMost9WQwGwn1pHQo9mXGxvksyhUsDu
 const initialState = {
   news: [],
 };
 
 export const GlobalProvider = ({ children }) => {
-  //   const [state, dispatch] = useReducer(AppReducer, initialState);
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   const getNews = async () => {
@@ -31,7 +29,6 @@ export const GlobalProvider = ({ children }) => {
         payload: combinedNews,
       });
     } catch (error) {
-      // Handle error if needed
       console.error("Error fetching news:", error);
     }
   };
