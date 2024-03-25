@@ -2,7 +2,7 @@ import React from "react";
 
 const TheHeader = () => {
   return (
-    <div>
+    <div className="main-section-container">
       <h2>Welcome to the News API project</h2>
       <p>
         In this project, I use the API from NY Time to GET 10 pieces of news of

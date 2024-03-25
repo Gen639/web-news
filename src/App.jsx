@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import TheHeader from "./assets/components/the-header/TheHeader";
@@ -13,12 +12,17 @@ function App() {
     <>
       <BrowserRouter>
         <GlobalProvider>
-          <NavF />
-          <Routes>
-            <Route path="/" element={<TheHeader />} />
-            <Route path="/form" element={<FormF />} />
-            <Route path="/list" element={<ListF />} />
-          </Routes>
+          <div className="page-container">
+            <div className="main-content">
+              <NavF />
+              <Routes>
+                <Route path="/" element={<TheHeader />} />
+                <Route path="/form" element={<FormF />} />
+                <Route path="/list" element={<ListF />} />
+              </Routes>
+            </div>
+          </div>
+
           <Footer />
         </GlobalProvider>
       </BrowserRouter>

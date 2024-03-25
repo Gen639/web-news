@@ -4,7 +4,7 @@ import "./NavF.css";
 
 const NavF = () => {
   return (
-    <div>
+    <nav>
       <span className="link-to">
         <Link to="/">Main page</Link>
       </span>
@@ -15,7 +15,7 @@ const NavF = () => {
       <span className="link-to">
         <Link to="/list">See all news </Link>
       </span>
-    </div>
+    </nav>
   );
 };
 

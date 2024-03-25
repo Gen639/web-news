@@ -1,16 +1,19 @@
 .div-container {
   margin: 10px;
-  padding: 10px;
   background-color: rgba(91, 109, 130, 0.806);
   min-width: 600px;
   min-height: 400px;
 }
 h3 {
-  color: rgb(0, 38, 255);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: black;
 }
-p {
-  color: rgb(255, 255, 0);
+
+.caption-p {
+  color: rgb(255, 255, 255);
   font-style: oblique;
+  background-color: black;
 }
 .background-image {
   background-size: cover;
